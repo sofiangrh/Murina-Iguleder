@@ -1,0 +1,253 @@
+# Murrina Novum
+# Uses Murrina Engine by Cimi
+# Colors based on Clearlokks_blackblue by MeisterQ
+# Created by MeisterQ
+
+gtk-button-images		= 1	#set this to "1" if you want icons on buttons like "cancel" etc.
+
+style "theme-default"
+{
+
+	GtkScrollbar::has-forward-stepper = 1
+	GtkScrollbar::has-backward-stepper = 1
+	GtkScrollbar::has-secondary-forward-stepper = 0
+	GtkScrollbar::has-secondary-backward-stepper = 1
+
+	GtkButton      ::default_border    = { 0, 0, 0, 0 }
+	#GtkButton::default_outside_border	= { 2, 2, 2, 2 }
+	GtkRange       ::trough_border     = 0
+	GtkPaned       ::handle_size       = 6
+	GtkRange       ::slider_width      = 15
+	GtkRange       ::stepper_size      = 15
+
+	GtkScrollbar   ::min_slider_length = 30
+	GtkCheckButton ::indicator_size    = 14
+	GtkMenuBar     ::internal-padding  = 0
+	GtkTreeView    ::expander_size     = 14
+	GtkExpander    ::expander_size     = 16
+	#GtkScale       ::slider-length     = 24
+
+	xthickness = 1
+	ythickness = 1
+
+	fg[NORMAL]        = "#b8b9bb" 
+	fg[PRELIGHT]      = "#b8b9bb"
+  	fg[ACTIVE]        = "#b8b9bb" 
+  	fg[SELECTED]      = "#b8b9bb"
+  	fg[INSENSITIVE]   = "#35424A"
+
+  	bg[NORMAL]        = "#0E102A"
+  	bg[PRELIGHT]      = "#2F3B42"
+  	bg[ACTIVE]        = "#2F3B42"
+  	bg[SELECTED]      = "#35424A"
+  	bg[INSENSITIVE]   = "#0E102A"
+	
+  	base[NORMAL]      = "#35424A"
+  	base[ACTIVE]      = "#35424A"
+  	base[PRELIGHT]    = "#35424A"
+  	base[INSENSITIVE] = "#35424A"
+  	base[SELECTED]    = "#252D33"
+
+  	text[NORMAL]      = "#b8b9bb"
+  	text[INSENSITIVE] = "#35424A"
+  	text[SELECTED]    = "#b8b9bb"
+  	text[ACTIVE]      = "#b8b9bb"
+  	text[PRELIGHT]    = "#b8b9bb"
+
+	engine "murrine"  {
+		scrollbar_color   	= "#35424A"
+	    	contrast          	= 1.0
+	    	glazestyle 		= 1 		# 0 = flat hilight, 1 curved hilight (default)
+		menubarstyle    	= 2 		# 0 = flat, 1 = glass, 2 = gradient
+		menubaritemstyle   	= 1 		# 0 = menuitem look, 1 = button look
+		listviewheaderstyle 	= 1 		# 0 = flat, 1 = glass
+		squaredstyle    	= 1 		# 0 = default (rounded), 1 = squared
+		animation 		= TRUE
+	}
+}
+
+style "theme-wide" = "theme-default"
+{
+	xthickness = 2
+	ythickness = 3
+}
+
+style "theme-wider" = "theme-default"
+{
+  xthickness = 3
+  ythickness = 3
+}
+
+style "theme-menu" = "theme-default"
+{
+	xthickness = 5
+	ythickness = 5
+}
+
+style "theme-menubar" = "theme-default"
+{
+  xthickness = 2
+  ythickness = 2
+}
+
+style "theme-menubar-item" = "theme-menu-item"
+{
+}
+
+style "theme-menu-item"
+{
+	xthickness = 2
+	ythickness = 3
+	bg[NORMAL] = "#0E102A"
+	bg[SELECTED]   = "#35424A"
+	bg[PRELIGHT]   = "#495B66"
+	fg[SELECTED]   = "#b8b9bb"
+	fg[PRELIGHT]   = "#b8b9bb"
+}
+
+style "theme-tree" = "theme-default"
+{
+	xthickness = 2
+	ythickness = 2
+	GtkTreeView::odd_row_color = "#35424A"
+	GtkTreeView::even_row_color = "#35424A"
+}
+
+style "theme-tooltips" = "theme-default"
+{
+	xthickness = 2
+	ythickness = 2
+	bg[NORMAL] = "#35424A"
+}
+
+style "theme-progressbar" = "theme-default"
+{
+	xthickness = 1
+	ythickness = 1
+	#fg[PRELIGHT]	= "#"
+	bg[NORMAL]	= "#35424A"
+	#bg[SELECTED]	= "#35424A"
+	fg[NORMAL]	= "#b8b9bb"
+}
+
+style "theme-button" = "theme-wide"
+{
+	bg[NORMAL] = "#242D33"
+	#bg[ACTIVE] = "#35424A"
+	#bg[PRELIGHT] = "#35424A"
+}
+
+style "theme-scrollbars" = "theme-default"
+{
+	xthickness = 4
+	ythickness = 4
+}
+
+style "theme-panel-buttons"
+{
+	xthickness = 1
+	ythickness = 2
+	bg[NORMAL] = "#0E102A"
+	bg[ACTIVE] = "#35424A"
+	bg[SELECTED] = "#35424A"
+	bg[PRELIGHT] = "#35424A"
+	fg[ACTIVE] = "#b8b9bb"
+	base[ACTIVE] = "#b8b9bb"
+	text[ACTIVE] = "#b8b9bb"
+}
+
+style "theme-panel-bg"
+
+{
+	ythickness = 1
+	bg[NORMAL]       	= "#0E102A"
+	bg[ACTIVE]       	= "#35424A"
+	bg[PRELIGHT]     	= "#35424A"
+	bg[SELECTED]     	= "#35424A"
+	bg[INSENSITIVE]  	= "#0E102A"
+
+	base[NORMAL]     	= "#35424A"
+	base[ACTIVE]     	= "#35424A"
+	base[PRELIGHT]   	= "#35424A"
+	base[INSENSITIVE]	= "#35424A"
+	base[SELECTED]   	= "#35424A"
+}
+
+style "theme-clock"
+{
+	fg[NORMAL]		= "#b8b9bb"
+	fg[PRELIGHT]		= "#b8b9bb"
+	fg[ACTIVE]		= "#0E102A"
+	bg[PRELIGHT]		= "#35424A"
+	base[ACTIVE]		= "#35424A"
+}
+
+style "theme-notebook" = "theme-wide"
+{
+	ythickness = 2
+	base[SELECTED] = "#35424A"
+	bg[NORMAL]        = "#0E102A"
+  	bg[PRELIGHT]      = "#35424A"
+  	bg[ACTIVE]        = "#35424A"
+  	bg[SELECTED]      = "#35424A"
+  	bg[INSENSITIVE]   = "#0E102A"
+}
+
+style "metacity-frame"
+{
+	bg[INSENSITIVE]  = "#0E102A"
+	fg[INSENSITIVE]  = "#b8b9bb"
+	bg[SELECTED]  = "#35424A"
+	fg[SELECTED]  = "#b8b9bb"
+}
+class "MetaFrames" 	  style "metacity-frame"
+class "GtkWindow"      style "metacity-frame"
+
+# widget styles
+class "GtkWidget" style "theme-default"
+class "GtkButton" style "theme-button"
+class "GtkCombo"  style "theme-button"
+class "GtkRange"  style "theme-button"
+class "GtkFrame"  style "theme-wide"
+class "GtkMenu"   style "theme-menu"
+class "GtkEntry"  style "theme-button"
+class "GtkMenuItem"    style "theme-menu-item"
+class "GtkMenuLine"	style "theme-default"
+class "GtkStatusbar"   style "theme-wide"
+class "GtkNotebook"    style "theme-notebook"
+class "GtkProgressBar" style "theme-progressbar"
+class "GtkCheckButton" style "theme-button"
+class "GtkRadioButton" style "theme-button"
+class "*MenuBar*"  style "theme-menu-item"
+widget_class "*MenuItem.*" style "theme-menu-item"
+class "*Panel*" style "theme-panel-bg"
+class "*notif*" style "theme-panel-bg"
+class "*Notif*" style "theme-panel-bg"
+class "*Tray*" style "theme-panel-bg"
+class "*tray*" style "theme-panel-bg"
+class "*Netstatus*" style "theme-panel-bg"
+class "*netstatus*" style "theme-panel-bg"
+class "*clock*"				style "theme-clock"
+class "*clock*"				style "theme-clock"
+widget "*clock-applet*"		style "theme-clock"
+
+# tooltips stuff
+widget "gtk-tooltips" style "theme-tooltips"
+
+# treeview stuff
+widget_class "*.GtkTreeView.GtkButton" style "theme-tree"
+widget_class "*.GtkCTree.GtkButton" style "theme-tree"
+widget_class "*.GtkList.GtkButton" style "theme-tree"
+widget_class "*.GtkCList.GtkButton" style "theme-tree"
+
+# notebook stuff
+widget_class "*.GtkNotebook.*.GtkEventBox" style "theme-notebook"
+widget_class "*.GtkNotebook.*.GtkViewport" style "theme-notebook"
+
+# scrollbars
+widget_class "*Scrollbar*"  style "theme-scrollbars"
+class "*Scrollbar*"         style "theme-scrollbars"
+
+# panelbuttons
+widget_class "*Panel*GtkButton"	style "theme-panel-buttons"
+widget_class "*Panel*GtkToggleButton"	style "theme-panel-buttons"
